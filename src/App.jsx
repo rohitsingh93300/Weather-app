@@ -16,7 +16,7 @@ const App = () => {
   }
 
   const weather = async () => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=d2589a3873f23403eae995dd50b73690`
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${import.meta.env.VITE_API_KEY}`
     try {
       const res = await axios.get(url)
       const data = res.data
